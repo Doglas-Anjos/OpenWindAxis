@@ -1,0 +1,16 @@
+target/
+node_modules/
+web/dist/
+web/src/wasm/
+bench/data/
+bench/**/target/
+bench/go_bench/go_bench*
+reference/
+web/bench-*.csv
+
+# Worktrees of parallel agents
+.claude/worktrees/
+
+# Local measurement data (projects built from the user's own files)
+dados/
+*.tsbuildinfo

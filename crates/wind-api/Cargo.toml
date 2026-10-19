@@ -1,0 +1,14 @@
+[package]
+name = "wind-api"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Wire contract (DTOs) between wind-core and its callers: browser, CLI, server."
+
+[dependencies]
+wind-core = { path = "../wind-core" }
+serde = { version = "1", features = ["derive"] }
+# Exact float parsing: a recipe read back must hold the very numbers written (ARQUITETURA C3).
+serde_json = { version = "1", features = ["float_roundtrip"] }
+ts-rs = { version = "12.0.1", features = ["no-serde-warnings"] }

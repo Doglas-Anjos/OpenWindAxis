@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+members = ["crates/wind-core", "crates/wind-api", "crates/wind-wasm", "crates/wind-cli"]
+exclude = ["bench"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/Doglas-Anjos/OpenWindAxis"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1

@@ -1,0 +1,27 @@
+{
+  "name": "wind-web",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "wasm": "cargo build -p wind-wasm --target wasm32-unknown-unknown --release && wasm-bindgen ../target/wasm32-unknown-unknown/release/wind_wasm.wasm --target web --out-dir src/wasm",
+    "dev": "vite",
+    "typecheck": "tsc",
+    "build": "npm run wasm && tsc && vite build"
+  },
+  "dependencies": {
+    "echarts": "^5.6.0",
+    "leaflet": "1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/leaflet": "1.9.20",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.4.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
